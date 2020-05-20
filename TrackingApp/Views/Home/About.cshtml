@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<head>
+
+    <link href="~/assets3/css/style.css" rel="stylesheet" />
+    <link href="~/assets/css/style.css" rel="stylesheet" />
+    <style>
+        .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+        .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+        .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+        .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+        .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+        .col-xl-auto {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .section-header h3 {
+            font-size: 36px;
+            color: #5d5d5d;
+            text-align: center;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 15px;
+        }
+    </style>
+</head>
+
+<main id="main">
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about">
+        <div class="container">
+
+            <header class="section-header">
+                <h3>About Us</h3>
+                <p>Forms Tracking system created to serve secretaries to keep track of their daily activites in an effiecient and easy way which saves time and effort.</p>
+            </header>
+
+            <div class="row about-container">
+
+                <div class="col-lg-6 content order-lg-1 order-2">
+                        <h3>Why Us</h3> 
+                    <br/>
+                        <div class="icon-box wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                            <div class="icon"><i class="fa fa-clock-o"></i></div>
+                            <h4 class="title"><a href="">Work efficiency</a></h4>
+                            <p class="description">The goal of the system is to keep track of work documents electronically whcih increase the work productivity</p>
+                        </div>
+
+                        <div class="icon-box wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                            <div class="icon"><i class="fa fa-bar-chart"></i></div>
+                            <h4 class="title"><a href="">Organize Data Effortlessly</a></h4>
+                            <p class="description">Access the data anytime with clicks, import/export data to perform data action such as sort, filter.</p>
+                        </div>
+
+                        <div class="icon-box wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <div class="icon"><i class="fa fa-thumbs-o-up"></i></div>
+                            <h4 class="title"><a href="">Ease of use</a></h4>
+                            <p class="description">Our system does not require technical knowledge as it is easy and convenient to use</p>
+                        </div>
+
+                </div>
+
+                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                    <img src="~/assets3/img/analysis.svg" class="img-fluid" alt="">
+                </div>
+            </div>
+
+            <div class="row about-extra">
+                <div class="col-lg-6 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                    <img src="~/assets3/img/adminpic.svg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0" style="visibility: visible; animation-name: fadeInUp;">
+                    <h4>Using the system as an admin.</h4> <br/>
+                    <p>
+                        The tracking system provides useful services for the admin, 
+                    </p>
+                    <p>
+                        the admin can log in to create user accoutns, updates the accounts.
+                    </p>
+                    <p>
+                        The user can log in to the system by the account created by the manager.
+                    </p>
+                    <p>
+                        Also the admin has the ability to view the employees forms and tracks in case of needed.
+                    </p>
+                </div>
+            </div>
+           <br/>
+            <div class="row about-extra">
+                <div class="col-lg-6 wow fadeInUp order-1 order-lg-2" style="visibility: visible; animation-name: fadeInUp;">
+                    <img src="~/assets3/img/web2.png" class="img-fluid" alt="">
+                </div>
+                <br/>
+                <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1" style="visibility: visible; animation-name: fadeInUp;">
+                    <h4>Using the system as user.</h4> 
+                    <p>
+                    </p>
+                    <p>
+                        The tracking system provides useful services for the user, 
+                    </p>
+                    <p>
+                        the user can log in to the system after recieving the account information 
+                    </p>
+                    <p>
+                        from the admin, to create forms, create tracks,
+                    </p>
+                    <p>
+                        as well as creating a status of each track, and keeping update of each created form and track.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- #about -->
+
+</main>

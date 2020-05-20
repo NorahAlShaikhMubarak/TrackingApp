@@ -1,0 +1,70 @@
+﻿@model TrackingApp.Models.System_User
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h4>Are you sure you want to delete this?</h4>
+<div>
+    <hr />
+    <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+        <div class="widget">
+            <h4 class="widget-title">System user</h4>
+            <div class="summary-block">
+                <div class="summary-content">
+                    <div class="summary-head">
+                        <h5 class="summary-title">
+                            @Html.DisplayNameFor(model => model.User_name)
+                        </h5>
+                    </div>
+                    <div class="summary-price">
+                        <p class="summary-text">@Html.DisplayFor(model => model.User_name)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-block">
+                <div class="summary-content">
+                    <div class="summary-head"> <h5 class="summary-title">@Html.DisplayNameFor(model => model.User_password)</h5></div>
+                    <div class="summary-price">
+                        <p class="summary-text">@Html.DisplayFor(model => model.User_password)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-block">
+                <div class="summary-content">
+                    <div class="summary-head"> <h5 class="summary-title">@Html.DisplayNameFor(model => model.User_department)</h5></div>
+                    <div class="summary-price">
+                        <p class="summary-text">@Html.DisplayFor(model => model.User_department)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-block">
+                <div class="summary-content">
+                    <div class="summary-head"> <h5 class="summary-title">@Html.DisplayNameFor(model => model.User_email)</h5></div>
+                    <div class="summary-price">
+                        <p class="summary-text">@Html.DisplayFor(model => model.User_email)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-block">
+                <div class="summary-content">
+                    <div class="summary-head"> <h5 class="summary-title">@Html.DisplayNameFor(model => model.User_badge)</h5></div>
+                    <div class="summary-price">
+                        <p class="summary-text">@Html.DisplayFor(model => model.User_badge)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

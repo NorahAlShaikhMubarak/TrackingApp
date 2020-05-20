@@ -1,0 +1,64 @@
+﻿@model TrackingApp.Models.System_Track
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+    <div class="widget">
+        <h4 class="widget-title">Track form</h4>
+        <div class="summary-block">
+            <div class="summary-content">
+                <div class="summary-head">
+                    <h5 class="summary-title">
+                        @Html.DisplayNameFor(model => model.System_Form.Form_title)
+                    </h5>
+                </div>
+                <div class="summary-price">
+                    <p class="summary-text">@Html.DisplayFor(model => model.System_Form.Form_title)</p>
+                </div>
+            </div>
+        </div>
+        <div class="summary-block">
+            <div class="summary-content">
+                <div class="summary-head">
+                    <h5 class="summary-title">
+                        @Html.DisplayNameFor(model => model.System_Status_Track.Status_track_name)
+                    </h5>
+                </div>
+                <div class="summary-price">
+                    <p class="summary-text">@Html.DisplayFor(model => model.System_Status_Track.Status_track_name)</p>
+                </div>
+            </div>
+        </div>
+        <div class="summary-block">
+            <div class="summary-content">
+                <div class="summary-head"> <h5 class="summary-title">@Html.DisplayNameFor(model => model.Track_remark)</h5></div>
+                <div class="summary-price">
+                    <p class="summary-text">@Html.DisplayFor(model => model.Track_remark)</p>
+                </div>
+            </div>
+        </div>
+        <div class="summary-block">
+            <div class="summary-content">
+                <div class="summary-head"> <h5 class="summary-title">@Html.DisplayNameFor(model => model.Track_title)</h5></div>
+                <div class="summary-price">
+                    <p class="summary-text">@Html.DisplayFor(model => model.Track_title)</p>
+                </div>
+            </div>
+        </div>
+        <div class="summary-block">
+            <div class="summary-content">
+                <div class="summary-head"> <h5 class="summary-title">@Html.DisplayNameFor(model => model.Track_date)</h5></div>
+                <div class="summary-price">
+                    <p class="summary-text">@Html.DisplayFor(model => model.Track_date)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Track_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

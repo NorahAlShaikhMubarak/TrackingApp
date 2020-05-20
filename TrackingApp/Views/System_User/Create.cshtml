@@ -1,0 +1,91 @@
+﻿@model TrackingApp.Models.System_User
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="card">
+        <div class="card-header">
+            <strong>Create user account</strong>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        </div>
+        <div class="card-body card-block">
+            <form class="form-horizontal">
+
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <i class="fa fa-user"></i>
+                        <label for="text-input" class=" form-control-label">Enter username</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        @Html.EditorFor(model => model.User_name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.User_name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <i class="fa fa-asterisk"></i>
+                        <label for="password" class=" form-control-label">User password</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        @Html.EditorFor(model => model.User_password, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.User_password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <i class="fa fa-building-o"></i>
+                        <label for="text-input" class=" form-control-label">User department</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        @Html.EditorFor(model => model.User_department, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.User_department, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <i class="fa fa-envelope"></i>
+                        <label for="text-input" class=" form-control-label">User email</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        @Html.EditorFor(model => model.User_email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.User_email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <i class="fa-credit-card"></i>
+                        <label for="text-input" class=" form-control-label">User badge</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        @Html.EditorFor(model => model.User_badge, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.User_badge, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary btn-sm">
+                <i class="fa fa-dot-circle-o"></i> Submit
+            </button>
+            <button type="reset" class="btn btn-danger btn-sm">
+                <i class="fa fa-ban"></i> Reset
+            </button>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+

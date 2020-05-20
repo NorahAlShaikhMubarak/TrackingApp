@@ -1,0 +1,115 @@
+/* This css file is to over write bootstarp css
+--------------------------------------------------------- /
+* Theme Name: Ela Admin Template
+* Theme URI: http://demos.jeweltheme.com/
+* Author: jewel_theme
+* Author URI: http://themeforest.net/user/jewel_theme/portfolio
+* Description:
+* Version: 1.0.0
+* License: GNU General Public License v2 or later
+* License URI: http://www.gnu.org/licenses/gpl-2.0.html
+* Tags: html, themplate, Ela Admin
+--------------------------------------------------------- */
+/* 
+
+
+Googel Fonts  */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+/* Googel Fonts End  
+
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+
+#content {
+    padding-bottom: 447px;
+    width: 100%;
+    float: left;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+div {
+    display: block;
+}
+
+@media only screen and (max-width: 979px) and (min-width: 768px) #sub .fullWidth:first-child {
+    padding-top: 35px !important;
+}
+
+#sub .fullWidth:first-child {
+    padding: 80px 0 40px 0;
+}
+
+.fullWidth.view {
+    opacity: 1;
+}
+
+.fullWidth {
+    width: 100%;
+    float: left/;
+    transition: all ease-in-out .6s;
+    opacity: 0;
+    float: left;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.fullWidth h1 {
+    font-size: 48px;
+    font-family: 'efraLightRegular';
+    color: #3e3e3e;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 46px;
+}
+
+@media only screen and (max-width: 979px) and (min-width: 768px) .col-md-12 summary {
+    width: 100%;
+}
+
+.col-md-12 summary {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.fullWidth summary {
+    font-size: 22px;
+    text-align: center;
+    color: #666666;
+    font-family: 'efraLightRegular';
+    width: 100%;
+    display: block;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+

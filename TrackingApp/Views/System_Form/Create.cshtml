@@ -1,0 +1,125 @@
+﻿@model TrackingApp.Models.System_Form
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm("Create", "System_Form", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+{
+    @Html.AntiForgeryToken()
+
+    <div class="card">
+        <div class="card-header">
+            <strong>Create form</strong>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        </div>
+        <div class="card-body card-block">
+            <form class="form-horizontal">
+
+                <div class="row form-group">
+                    @*<div class="col col-md-3">
+                        <i class="fa fa-user"></i>
+                        <label for="select" class=" form-control-label">Select username</label>
+                    </div>*@
+                    <div class="col-12 col-md-9" style="display: none;">
+                        @Html.DropDownList("User_id", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.User_id, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <i class="fa fa-bars"></i>
+                        <label for="text-input" class=" form-control-label">Form title</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        @Html.EditorFor(model => model.Form_title, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Form_title, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <i class="fa fa-file"></i>
+                        <label for="textarea-input" class=" form-control-label">Form note</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        @Html.TextAreaFor(model => model.Form_note, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Form_note, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <i class="fa fa-bookmark"></i>
+                        <label for="textarea-input" class=" form-control-label">Form remark</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        @Html.TextAreaFor(model => model.Form_remark, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Form_remark, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <i class="fa fa-bell"></i>
+                        <label class=" form-control-label">Form notification</label>
+                    </div>
+                    <div class="col col-md-9">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.Form_notification)
+                            @Html.ValidationMessageFor(model => model.Form_notification, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        @ViewBag.FileStatus
+                        <i class="fa fa-file-text"></i>
+                        <label class=" form-control-label">File Upload</label>
+                    </div>
+                    <div class="col col-md-9">
+                        <div class="editor-field">
+                            <input type="file" name="file" multiple="multiple" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.TextBox("Form_date", DateTime.Now.ToShortDateString(), new { @type = "hidden" })
+                        @Html.ValidationMessageFor(model => model.Form_date, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Form_status, new { @type = "hidden", @Value = "Opened" })
+                        @Html.ValidationMessageFor(model => model.Form_status, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary btn-sm">
+                <i class="fa fa-dot-circle-o"></i> Submit
+            </button>
+            <button type="reset" class="btn btn-danger btn-sm">
+                <i class="fa fa-ban"></i> Reset
+            </button>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}

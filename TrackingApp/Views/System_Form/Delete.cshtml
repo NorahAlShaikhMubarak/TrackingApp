@@ -1,0 +1,91 @@
+﻿@model TrackingApp.Models.System_Form
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h4>Are you sure you want to delete this?</h4>
+<div>
+    <hr />
+    <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+
+        <div class="widget">
+            <h4 class="widget-title">System form</h4>
+            <div class="summary-block">
+                <div class="summary-content">
+                    <div class="summary-head">
+                        <h5 class="summary-title">
+                            @Html.DisplayNameFor(model => model.System_User.User_name)
+                        </h5>
+                    </div>
+                    <div class="summary-price">
+                        <p class="summary-text">@Html.DisplayFor(model => model.System_User.User_name)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-block">
+                <div class="summary-content">
+                    <div class="summary-head">
+                        <h5 class="summary-title">
+                            @Html.DisplayNameFor(model => model.Form_note)
+                        </h5>
+                    </div>
+                    <div class="summary-price">
+                        <p class="summary-text">@Html.DisplayFor(model => model.Form_note)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-block">
+                <div class="summary-content">
+                    <div class="summary-head"> <h5 class="summary-title">@Html.DisplayNameFor(model => model.Form_remark)</h5></div>
+                    <div class="summary-price">
+                        <p class="summary-text">@Html.DisplayFor(model => model.Form_remark)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-block">
+                <div class="summary-content">
+                    <div class="summary-head"> <h5 class="summary-title">@Html.DisplayNameFor(model => model.Form_title)</h5></div>
+                    <div class="summary-price">
+                        <p class="summary-text">@Html.DisplayFor(model => model.Form_title)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-block">
+                <div class="summary-content">
+                    <div class="summary-head"> <h5 class="summary-title">@Html.DisplayNameFor(model => model.Form_date)</h5></div>
+                    <div class="summary-price">
+                        <p class="summary-text">@Html.DisplayFor(model => model.Form_date)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-block">
+                <div class="summary-content">
+                    <div class="summary-head"> <h5 class="summary-title">@Html.DisplayNameFor(model => model.Form_notification)</h5></div>
+                    <div class="summary-price">
+                        <p class="summary-text">@Html.DisplayFor(model => model.Form_notification)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-block">
+                <div class="summary-content">
+                    <div class="summary-head"> <h5 class="summary-title">@Html.DisplayNameFor(model => model.Form_status)</h5></div>
+                    <div class="summary-price">
+                        <p class="summary-text">@Html.DisplayFor(model => model.Form_status)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

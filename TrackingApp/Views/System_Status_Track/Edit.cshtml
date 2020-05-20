@@ -1,0 +1,44 @@
+﻿@model TrackingApp.Models.System_Status_Track
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="card">
+        <div class="card-header">
+            <strong>Add status</strong>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        </div>
+        <div class="card-body card-block">
+            <form class="form-horizontal">
+
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <i class="fa fa-dot-circle-o"></i>
+                        <label for="text-input" class=" form-control-label">Track status</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        @Html.EditorFor(model => model.Status_track_name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Status_track_name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary btn-sm">
+                <i class="fa fa-dot-circle-o"></i> Submit
+            </button>
+            <button type="reset" class="btn btn-danger btn-sm">
+                <i class="fa fa-ban"></i> Reset
+            </button>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
